@@ -45,6 +45,16 @@ console.log(convert.toHtml('\x1b[30mblack\x1b[37mwhite'));
     <span style="color:#000">black<span style="color:#AAA">white</span></span>
 */
 ```
+With ESM in Svelte:
+```svelte
+<script>
+    import Convert from 'ansi-to-html';
+</script>
+
+<div>
+    {@html new Convert().toHtml("\x1b[30mblack\x1b[37mwhite")}
+</div>
+```
 
 
 ## Command line usage
